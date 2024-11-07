@@ -82,7 +82,7 @@ var
   I, J: Integer;
   RowData: iModelReportData;
 begin
-  Result := '<table border="1" cellspacing="0" cellpadding="5">';
+  Result := '<table class="table table-striped table-bordered" border="1" cellspacing="0" cellpadding="5">';
   Result := Result + '<tr>';
 
   for I := 0 to High(FColumnLabels) do
@@ -127,4 +127,3 @@ begin
 end;
 
 end.
-
