@@ -17,12 +17,12 @@ Para utilizar o d2webreport você deve adicionar as uses:
 ## Como usar
 ```pascal
   var HTML := TModelReportFactory.New
-								 .HTMLReport
-								 .HeaderColor($157347, $FFFFFF)
-								 .BackgroundColor($e8f0ff)
-									.Titulo('Relatorio de Titulares')
-									.AddReportDataSet(['Código', 'Nome', 'CPF', 'Situação'])
-										.AddReportData([1, 'Antonio Jorge Ruan das Neves', '775.304.570-98', 'Ativo'])
-										.&End
-									.Generate;
+                                 .HTMLReport
+				 .HeaderColor($157347, $FFFFFF)
+				 .BackgroundColor($e8f0ff)
+				 .Titulo('Relatorio de Titulares')
+				 .AddReportDataSet(['Código', 'Nome', 'CPF', 'Situação'])
+                                     .AddReportData([1, 'Antonio Jorge Ruan das Neves', '775.304.570-98', 'Ativo'])
+                                     .&End
+				 .Generate;
 ```
