@@ -19,6 +19,7 @@ type
     function ClearDataSets: iModelReport;
     function HeaderColor(ABackgroundColor, ATextColor: TColor): iModelReport;
     function BackgroundColor(ABackgroundColor: TColor): iModelReport;
+    function SaveToFile(const AFileName: string): Boolean;
     function Generate: string;
    end;
 
