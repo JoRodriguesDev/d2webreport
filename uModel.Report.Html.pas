@@ -28,6 +28,7 @@ type
     function ClearDataSets: iModelReport;
     function HeaderColor(ABackgroundColor, ATextColor: TColor): iModelReport;
     function BackgroundColor(ABackgroundColor: TColor): iModelReport;
+    function SaveToFile(const AFileName: string): Boolean;
     function Generate: string;
   end;
 
@@ -61,6 +62,22 @@ begin
   Green := GetGValue(RGBColor);
   Blue := GetBValue(RGBColor);
   Result := Format('#%.2x%.2x%.2x', [Red, Green, Blue]);
+end;
+
+function TModelReportHTML.SaveToFile(const AFileName: string): Boolean;
+var
+  LContent: TBytes;
+  LFileStream: TFileStream;
+begin
+  Result := False;
+  LContent := TEncoding.UTF8.GetBytes(Generate);
+  LFileStream := TFileStream.Create(AFileName, fmCreate);
+  try
+    LFileStream.WriteBuffer(LContent[0], Length(LContent));
+    Result := True;
+  finally
+    LFileStream.Free;
+  end;
 end;
 
 class function TModelReportHTML.New: iModelReport;
