@@ -1,11 +1,6 @@
 # d2webreport
 Este repositório contém um conjunto de classes Delphi desenvolvido para gerar relatorios no formato HTML Criado para um projeto em [D2Bridge](https://www.d2bridge.com.br/), um framework que permite compilar projetos VCL ou FireMonkey para a Web com o mesmo código.
 
-<p align="center">
-	<img src="https://agiliza.click/charts.gif">
-</p>
-
-
 ## Instalação
 Instalação usando o boss
 ```
